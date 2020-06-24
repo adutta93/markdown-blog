@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>New Article</title>
+  </head>
+  <body>
+    <div class="container">
+      <h4 class="mb-4 mt-4">New Article</h4>
+      <form action="/articles" method="POST">
+        <div class="form-group">
+          <label for="tittle">Tittle</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tittle"
+            aria-describedby="emailHelp"
+            placeholder="Enter Tittle"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="description" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="mark-down">Markdown</label>
+          <textarea class="form-control" id="mark-down" rows="3"></textarea>
+        </div>
+        <a href="/articles" class="btn btn-secondary">Cancel</a>
+        <a href="/articles" class="btn btn-primary">Save</a>
+      </form>
+    </div>
+  </body>
+</html>

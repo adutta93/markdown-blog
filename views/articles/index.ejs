@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Articles</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- navbar -->
+      <nav class="navbar navbar-light bg-warning mt-2">
+        <a class="navbar-brand" href="#">
+          <img
+            src="/docs/4.0/assets/brand/bootstrap-solid.svg"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          TechBloggers
+        </a>
+        <!-- new article btn -->
+        <a href="/articles/new" class="btn btn-success">Add article</a>
+      </nav>
+
+      <!-- article card -->
+      <% articles.forEach( article => { %>
+      <div class="card mt-4 card-style">
+        <div class="card-body">
+          <h4 class="card-tittle"><%= article.Tittle %></h4>
+          <div class="card-subtittle text-muted">
+            <%= article.CreatedAt.toLocaleDateString() %>
+          </div>
+          <div class="card-text mt-3 mb-3">
+            <%= article.Description %>
+          </div>
+          <a href="/articles/new" class="btn btn-primary">Read more</a>
+          <a href="/articles/update" class="btn btn-info">Edit</a>
+          <a href="/articles/remove" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
